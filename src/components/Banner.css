@@ -1,0 +1,35 @@
+.banner {
+    position: relative;
+    min-height: 223px; /* Hauteur de la bannière */
+    background-image: url('/Users/Meriem/Projet6/kasa/public/eric-muhr.png'); 
+    background-size: cover; 
+    background-position: center; 
+    color: white; 
+    text-align: center; 
+    max-width: 100%;
+    border-radius: 2rem; 
+    display: grid;
+    place-items: center;
+    margin-top: 40px;
+}
+
+.banner::before {
+    content: ""; /* Contenu du pseudo-élément */
+    position: absolute; /* Position absolue pour se superposer à la bannière */
+    top: 0; /* Position en haut de la bannière */
+    left: 0; /* Position à gauche de la bannière */
+    width: 100%; /* Largeur de la bannière */
+    height: 100%; /* Hauteur de la bannière */
+    background-color: rgba(0, 0, 0, 0.6); /* Couleur de fond noire semi-transparente */
+    border-radius: 2rem; /* Ajout du même bord arrondi à mon overlay */
+}
+
+.banner h2 { 
+    font-family: Montserrat; 
+    font-size: 48px;
+    font-weight: 700; 
+    line-height: 68px; 
+    text-shadow: 2px 2px 0 black; /* Contour noir */
+    position:relative;
+    z-index: 1/* ; pour viter que la transparence s'applique a mon texe   */
+}

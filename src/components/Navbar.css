@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    color: black;
+    font-weight: 700;
+    gap:2rem;
+    border: 1px solid orange;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+    
+}
+.navbar_logo{
+   margin-right: auto;
+    width:17%;/* je me base sur les dim reel du logo comparé a la taille réel de la div en mode desktop est ce que c'est correct ?  */
+    height:auto;
+}
+.navbar_logo img {
+    width: 210.32px; 
+    height: 60px;
+ }
+
+
+
+
+
+
+
+
