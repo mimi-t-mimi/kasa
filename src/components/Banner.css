@@ -1,7 +1,7 @@
 .banner {
     position: relative;
     min-height: 223px; /* Hauteur de la bannière */
-    background-image: url('/Users/Meriem/Projet6/kasa/public/eric-muhr.png'); 
+    background-image: url('/Users/Meriem/Projet6/kasa/public/images/eric-muhr.png'); 
     background-size: cover; 
     background-position: center; 
     color: white; 

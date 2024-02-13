@@ -1,21 +1,16 @@
 import React from "react";
 import "./ApartmentList.css";
+import Apartment from "../pages/Apartment"
 
 function ApartmentList(){
     return <div className="list">
         
-        <div>Apartement</div>
-        <div>Apartement</div>
-        <div>Apartement</div>
-        <div>Apartement</div> 
-        <div>Apartement</div>
-        <div>Apartement</div>
-        <div>Apartement</div>
-        <div>Apartement</div>  
-        <div>Apartement</div>
-        <div>Apartement</div>
-        <div>Apartement</div>
-        <div>Apartement</div> 
+        <Apartment/>
+        <Apartment/> 
+        <Apartment/> 
+        <Apartment/> 
+        <Apartment/> 
+        <Apartment/>
 
         </div>
 }

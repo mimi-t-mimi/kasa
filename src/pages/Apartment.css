@@ -1,0 +1,6 @@
+.apartment{
+
+        text-align: left; /* Alignement horizontal à gauche */
+        align-items: flex-end; /* Alignement vertical en bas */
+
+}

@@ -1,21 +1,27 @@
 import React from 'react'; 
-import Navbar from './Navbar'; 
 import './App.css';
-import Banner from './Banner'
-import ApartmentList from './ApartmentList'
+import { Routes, Route } from 'react-router-dom';
+import Home from '../pages/Home';
+import About from '../pages/About';
+import Apartment from '../pages/Apartment';
+import Error404 from '../pages/Error404';
 
 
 function App() {
-    return <div> 
-<Navbar />
+    return (
 
-<Banner />
-<ApartmentList/>
+        <div>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/a-propos" element={<About />} />
+                <Route path="/fiche-logement/:id" element={<Apartment />} />
+                <Route path="*" element={<Error404 />} />
 
+            </Routes>
+        </div>
 
-
-
-    </div> 
+    );
+   
 }
 
 export default App
