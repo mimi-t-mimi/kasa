@@ -1,27 +1,31 @@
 import React from 'react'; 
-import './App.css';
+import './App.scss';
 import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import About from '../pages/About';
-import Apartment from '../pages/Apartment';
 import Error404 from '../pages/Error404';
+import ApartmentPage from '../pages/ApartmentPage';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 
 function App() {
     return (
-
         <div>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/a-propos" element={<About />} />
-                <Route path="/fiche-logement/:id" element={<Apartment />} />
-                <Route path="*" element={<Error404 />} />
-
-            </Routes>
+            <Navbar />
+            <div className="main">
+               
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="*" element={<Error404 />} />
+                    <Route path="/ApartmentPage" element={<ApartmentPage/>} />
+                </Routes>
+               
+            </div>
+            <Footer />
         </div>
-
     );
-   
 }
 
-export default App
+export default App; 

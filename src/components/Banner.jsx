@@ -1,9 +1,10 @@
 import React from "react";
-import "./Banner.css"
+import "./Banner.scss";
+// import imgBanner from "../assets/eric-muhr.png";
 
-function Banner(){
+function Banner() {
     return <div className="banner">
-            <h2>Chez vous, partout et ailleurs</h2>
+            <h1>Chez vous, partout et ailleurs</h1>
         </div>
 }
 export default Banner

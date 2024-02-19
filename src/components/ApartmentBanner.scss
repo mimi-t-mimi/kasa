@@ -1,0 +1,14 @@
+.apartment_banner{
+    margin-bottom: 1rem;
+    img {
+        margin: 0 auto; /* Pour centrer l'image */
+        width: 100%; /* Pour occuper la largeur de l'écran */
+        max-height: 20rem;
+        object-fit: cover;
+        border-radius: 1rem;
+        box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    }
+
+}
+
+    

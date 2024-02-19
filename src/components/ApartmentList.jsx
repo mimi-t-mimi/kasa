@@ -1,8 +1,10 @@
 import React from "react";
-import "./ApartmentList.css";
-import Apartment from "../pages/Apartment"
+import "./ApartmentList.scss";
+import Apartment from "./Apartment";
+
 
 function ApartmentList(){
+    fetch("./logements.json"); 
     return <div className="list">
         
         <Apartment/>

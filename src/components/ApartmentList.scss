@@ -1,6 +1,8 @@
+
+
 .list{
     border: 3px solid orange;
-    background-color: #F6F6F6;
+    background-color:#F6F6F6;
     margin-top: 2rem;
     border-radius: 2rem;
     min-height: 50Vh;
@@ -13,15 +15,8 @@
 
 }
 
-.list div{
-    border:3px solid blue;
-    background-color: red;
-    border-radius: 1rem;
-    flex-basis: 30%;   /*pour ne pas avoir plus de 3 dans ma  grille  */
-  
-}
 @media screen and (max-width: 768px) {
-    .list div {
-        flex-basis: calc(100% - 1rem); 
+    .list{
+        background-color: hsl(237, 52%, 51%);
     }
 }

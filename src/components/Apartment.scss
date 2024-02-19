@@ -1,0 +1,39 @@
+.apartment{
+        display: flex; /* Affichage en flexbox */
+        align-items: flex-end; /* Alignement vertical en bas */
+        border:3px solid blue;
+        background-image:linear-gradient(to bottom, #ff6060,#ae6b6b);
+        border-radius: 1rem;
+        flex-basis: 30%;   /*pour ne pas avoir plus de 3 dans ma  grille  */ 
+     
+
+        & a {
+                color: white;
+                text-decoration: none;
+                max-width: 50%; 
+                
+                &:hover { // Applique les styles quand la souris survole le lien
+                  text-decoration: underline; // Soulignement du texte
+                }
+              }
+            
+              & h2 {
+                margin: 10px 0; // Ajoute un petit espacement (5px) en haut et en bas du titre
+                padding-left: 20px;
+                font-size: 18px; // Définit la taille de la police
+                font-weight: 400; // Définit le poids de la police
+                white-space: pre-wrap; // Permet le passage à la ligne dans le texte
+
+              }
+            
+        }
+        
+
+        @media screen and (max-width: 768px) {
+                .apartment {
+                    flex-basis: 100%;
+                    height: calc(100vh / 3); /* Chaque élément Apartment occupe un tiers de la hauteur de l'écran */
+                    overflow-y: scroll; /* Ajouter une barre de défilement verticale si nécessaire */
+                }
+            }
+            
