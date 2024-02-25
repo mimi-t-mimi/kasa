@@ -1,22 +1,39 @@
 
-
 .list{
-    border: 3px solid orange;
     background-color:#F6F6F6;
     margin-top: 2rem;
     border-radius: 2rem;
-    min-height: 50Vh;
+    min-height: 50vh;
+    // max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     padding: 1rem;
-    justify-content:space-between
+    justify-content:space-between;
+    &>*{
+        max-width:100%;
+        min-width: 20rem;
     
-
-}
-
-@media screen and (max-width: 768px) {
-    .list{
-        background-color: hsl(237, 52%, 51%);
+     
     }
+
+    
 }
+
+@media screen and (width <= 768px) {
+    .list{
+        
+        background-color:white;
+        background-size: auto;
+        justify-content: center;   
+        // padding:0;  
+        // align-items: center;
+        // flex-basis: 100%;
+
+       
+       
+ } 
+
+    }
+   
+    

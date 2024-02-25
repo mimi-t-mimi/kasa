@@ -1,19 +1,41 @@
-import React from "react";
-import {ApartmentDescription} from "../components/ApartmentDescription";
-import {ApartmentBanner} from "../components/ApartmentBanner";
+import React,{useEffect,useState} from "react";
+import {DescriptionPanel} from "../components/DescriptionPanel";
+import {ImageBanner} from "../components/ImageBanner";
 import {ApartmentHeader} from "../components/ApartmentHeader";
 import "./ApartmentPage.scss";
-
+import {useLocation} from "react-router-dom";
 
 function ApartmentPage() {
+    const location = useLocation ();
+    console.log("location:",location);
+    console.log("our apartment id is:",location.state.apartmentId);
+    const[flat,setFlat]=useState(null);
+    useEffect(fetchApartmentData,[]);
+
+
+    
+    function fetchApartmentData(){
+        fetch("logements.json")
+            .then((res)=>res.json())
+            .then((flats) => {
+                const flat = flats.find((flat) => flat.id === location.state.apartmentId);
+                console.log("flat:",flat);
+                setFlat(flat);
+            })
+            .catch(console.error);  
+
+    }
+    if (flat== null) return <div>...LOADING</div>;
+
     return (
         <div className="apartment-page">
-            <ApartmentBanner/>
-            <ApartmentHeader/>
-            
+            <ImageBanner pictures={flat.pictures}/>
+            <ApartmentHeader flat={flat}/>
             <div className="apartment_description_area">   
-                <ApartmentDescription/>
-                <ApartmentDescription/>
+                <DescriptionPanel title="Description" content={flat.description}/>
+                <DescriptionPanel title="Equipements"content= {flat.equipments.map((eq, i) => ( 
+                <li key={i}>{eq}</li>
+                ))}/>
             </div>
         </div>
     );

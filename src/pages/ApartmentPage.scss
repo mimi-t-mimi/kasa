@@ -2,10 +2,13 @@
 
 .apartment-page {
     color: $color-primary;
- /*     padding: 0 1rem;Ajout de marges sur les côtés */
-   
-.apartment_description_area  {
-    display: flex;
-    gap:1rem;
+    padding: 0 1rem;
 }
+ .apartment_description_area  {
+    display:flex;
+    gap:2rem;
+    @media screen and (width <= 768px){
+        flex-direction:column;
+    }
+   
 }

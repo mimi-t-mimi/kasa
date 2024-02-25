@@ -1,12 +1,26 @@
- body{
-    border: 5px solid rgb(128, 255, 0); 
 
+@use "../scss/variables.scss" as *;
+body {
+    border: 5px solid rgb(128, 255, 0); 
     font-family: Montserrat;
-    font-weight: 700;
-    .main {
-      border: 5px purple solid ;
-      padding: 2rem;
-     min-height:60VH;
-      }
- }
- 
+    font-weight: 700; 
+    margin-top: 1rem;
+    
+  
+    
+}
+
+.main {
+    border: 5px purple solid ;
+    padding: 2rem 3rem;
+    min-height: 60vh;
+    
+    
+    
+    @media screen and (width <=768px){
+        padding: 1rem;
+        
+
+     }
+        
+    }

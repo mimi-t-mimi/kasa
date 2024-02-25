@@ -1,20 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./ApartmentList.scss";
-import Apartment from "./Apartment";
+import ApartmentCard from "../layout/ApartmentCard"
 
 
-function ApartmentList(){
-    fetch("./logements.json"); 
-    return <div className="list">
+function ApartmentList(){  // il est bon de mettre toute la logique a l'interieur du composant pour pouvoir le deplacer dans l'app sans perdre cette logisue 
+    const [apartments, setApartments]=useState([]); 
+
+    useEffect(fetchApartments,[]);
+
+    function fetchApartments(){
+        fetch("logements.json")
+            .then((res)=>res.json())
+            .then((res)=>setApartments(res))
+            .catch(console.error);
+      
+    }
         
-        <Apartment/>
-        <Apartment/> 
-        <Apartment/> 
-        <Apartment/> 
-        <Apartment/> 
-        <Apartment/>
 
+    return (
+    
+        <div className="list">
+            {apartments.map((apartment)=>(
+            <ApartmentCard title={apartment.title} imageUrl={apartment.cover} id={apartment.id}/>
+            ))}
+    
         </div>
+    );
 }
 
 export default ApartmentList;
