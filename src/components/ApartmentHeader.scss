@@ -32,6 +32,8 @@
 .apartment_owner {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     @media screen and (max-width: 768px) {
         flex-direction: row-reverse;
@@ -42,6 +44,9 @@
 .apartment_owner_details {
     display: flex;
     gap: 0.5rem;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    text-align: right;
 
 }
     

@@ -14,7 +14,8 @@ function About() {
 
   return (
     <>
-      <ImageBanner page="about"/>{/* Passer la prop "page" avec la valeur "about" */}
+      <ImageBanner page="about" className="image_container"/>{/* Passer la prop "page" avec la valeur "about" */}
+      
       <div className="about_container">
       
         <DescriptionPanel title="Fiabilité" content={content.Fiabilité} />

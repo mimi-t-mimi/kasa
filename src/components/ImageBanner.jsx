@@ -26,7 +26,7 @@ export function  ImageBanner (props){
         if (props.page === "about") {
             return (
               <div className="image_banner">
-                <img src="./images/about_image.png" alt="About" />
+                <img src="./images/about_image.png" alt="About" className="image_container" />
               </div>
             );
           }

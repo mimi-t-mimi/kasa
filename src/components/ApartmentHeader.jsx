@@ -20,7 +20,7 @@ const [firstName,lastName]=name.split();
             <div className="apartment_owner">
                 <div className="apartment_owner_details">
                     <h3>
-                        <span> {firstName}</span> 
+                        <span> {firstName}</span><br/>
                         <span>{lastName}</span>
                     </h3>
                     <div className="apartment_owner_badge">
