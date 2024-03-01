@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from "react";
 import {DescriptionPanel} from "../components/DescriptionPanel";
-import {ImageBanner} from "../components/ImageBanner";
+import {Gallery} from "../components/Gallery";
 import {ApartmentHeader} from "../components/ApartmentHeader";
 import "./ApartmentPage.scss";
 import {useLocation} from "react-router-dom";
@@ -29,7 +29,7 @@ function ApartmentPage() {
 
     return (
         <div className="apartment-page">
-            <ImageBanner pictures={flat.pictures}/>
+            <Gallery pictures={flat.pictures}/>
             <ApartmentHeader flat={flat}/>
             <div className="apartment_description_area">   
                 <DescriptionPanel title="Description" content={flat.description}/>

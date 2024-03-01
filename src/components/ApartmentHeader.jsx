@@ -4,7 +4,8 @@ import "./ApartmentHeader.scss";
 export function ApartmentHeader(props) {
 const flat= props.flat;
 const name =flat.host.name;
-const [firstName,lastName]=name.split();
+const [firstName,lastName]=name.split( " ");
+
         return ( 
             <div className="apartment_header">
             <div className="apartment_title">
@@ -20,9 +21,11 @@ const [firstName,lastName]=name.split();
             <div className="apartment_owner">
                 <div className="apartment_owner_details">
                     <h3>
-                        <span> {firstName}</span><br/>
-                        <span>{lastName}</span>
+                        {firstName}<br/>
+                        {lastName}
                     </h3>
+                    
+
                     <div className="apartment_owner_badge">
                         <img src={flat.host.picture} alt="" />
                     </div>

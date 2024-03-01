@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageBanner } from "../components/ImageBanner";
+import { Gallery } from "../components/Gallery";
 import { DescriptionPanel } from "../components/DescriptionPanel";
 import "./About.scss";
 
@@ -14,7 +14,7 @@ function About() {
 
   return (
     <>
-      <ImageBanner page="about" className="image_container"/>{/* Passer la prop "page" avec la valeur "about" */}
+      <Gallery page="about" className="image_container"/>{/* Passer la prop "page" avec la valeur "about" */}
       
       <div className="about_container">
       
