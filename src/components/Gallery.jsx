@@ -32,7 +32,7 @@ export function Gallery(props) {
         // Rendu spécial pour la page "about"
         return (
             <div className="gallery">
-                <img src="./images/about_image.png" alt="About" className="image_container" />
+                <img src="./images/about_image.jpg" alt="About" className="image_container" />
             </div>
         );
     }
