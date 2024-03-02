@@ -1,7 +1,9 @@
 @use "../scss/variables" as *;
+
 .gallery {
   margin-bottom: 1rem;
   position: relative;
+
   .btn {
     position: absolute;
     top: 0;
@@ -12,23 +14,28 @@
     color: $color-tertiary;
     font-size: 5rem;
     border-width: 0;
+
     &:active,
     &:focus {
       outline: none;
     }
+
     &.btn-next {
       left: 0;
     }
+
     &.btn-previous {
       right: 0;
     }
   }
+
   .image_container {
     position: relative;
     height: 50vh;
     width: 100%;
     border-radius: 1rem;
     object-fit: cover;
+
     img {
       margin: 0 auto; /* Pour centrer l'image */
       width: 100%; /* Pour occuper la largeur de l'écran */
@@ -41,13 +48,21 @@
       opacity: 0;
       transition: ease-in-out;
       transition-duration: 0.5s;
+
       &.show {
         opacity: 1;
       }
-      // @media screen and (width <= 768px){
-      //     min-height: 20rem;
-
-      // }
     }
+  }
+
+  .image_counter {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    color: $color-tertiary;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: -50px; //pour le placer à la moitié de la largeur de monélément
   }
 }

@@ -1,0 +1,32 @@
+@use "../scss/variables" as *;
+
+.apartment {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 1rem;
+  width: 340px; /* Largeur maximale pour chaque carte */
+  height: 340px; /* Hauteur fixe pour chaque carte */
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: $shadow-effect;
+    filter: brightness(0.8);
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%; /* Utiliser la pleine largeur de l'écran en mode responsive */
+    height: auto; /* Ajuster la hauteur automatiquement */
+  }
+}
+
+.apartment_subtitle {
+  position: absolute;
+  width: 50%;
+  margin-inline-start: 0.7rem; /* Ajoute un petit espacement (5px) en haut et en bas du titre */
+  margin-block-end: 0.7rem;
+  color: $color-tertiary;
+  font-weight: 400;
+}

@@ -1,36 +1,44 @@
+
 @use "../scss/variables.scss" as *;
 
+.description_panel {
+  margin-top: 2rem;
+  flex-basis: 50%;
 
-    .description_panel {
-        margin-top: 2rem;
-        flex-basis: 50%;  /* je lui met cet attribut pour faire en sorte que les deux description panel soient de la meme taille sur l'ecran */
-     
-        p{
-            margin-block: 0;
-        }
+  p {
+    margin-block: 0;
+  }
 
-        .description_header{
-            background-color: $color-primary;
-            color:$color-tertiary;
-            padding:0.2em 1em;   
-            border-radius: 0.7rem;
-            display:flex;
-            align-items: center;
-            justify-content: space-between;
-            i {
-                font-size: 1.5rem;
-                cursor: pointer;
-            }
-        }
-    }       
-        
-    .description_content{
-        background-color:$list-background;
-        color:$color-secondary;
-        padding: 1rem;
-        border-radius:0.7rem ;
-        position:relative;
-        top:-0.3rem;
-        z-index: -1;
-        
+  .description_header {
+    background-color: $color-primary;
+    color: $color-tertiary;
+    padding: 0.2em 1em;
+    border-radius: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    i {
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      transform: rotate(0deg); // Rotation initiale
     }
+
+    &.open {
+      i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.description_content {
+  background-color: $list-background;
+  color: $color-secondary;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  position: relative;
+  top: -0.3rem;
+  z-index: -1;
+}

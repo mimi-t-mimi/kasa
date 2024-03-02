@@ -1,8 +1,5 @@
 @use "../scss/variables.scss" as *;
 
-
-
-
 .error_page {
   color: $color-primary; // Appliquez la couleur primaire à toute la page
   text-align: center;
@@ -10,11 +7,10 @@
 
   h1 {
     font-size: 10rem;
-    margin-bottom: .5em;
-    
+    margin-bottom: 0.5em;
   }
 
-    h2 {
+  h2 {
     font-size: 1.5rem;
     font-weight: 500;
     margin-top: 0.5em;
@@ -22,13 +18,9 @@
   }
 
   a {
-    color: $color-secondary; // 
+    color: $color-secondary;
     text-decoration: underline;
     font-size: 18px;
     font-weight: 500;
-
-    
   }
-
 }
-

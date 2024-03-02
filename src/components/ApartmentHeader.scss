@@ -42,14 +42,10 @@
 }
 
 .apartment_owner_details {
-
-    border :1px solid red;
     display: flex;
-    // gap: 0.5rem;
     align-items: center;
     text-align: right;
     h3 {
-        border: 1px solid rgb(255, 0, 0);
         margin-top: 0;
         margin-bottom: 0;
         display: flex;
@@ -58,16 +54,12 @@
         justify-content: right;
         font-weight: 500;
         font-size: 18px;
-        // height:100%;
         text-wrap: wrap;
-     
     }
 
 }
-    
 
 .apartment_owner_badge img {
-    border: 1px solid yellow;
     height: 64px;
     width: 64px;
     border-radius: 50px;

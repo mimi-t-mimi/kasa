@@ -6,7 +6,7 @@ import About from '../pages/About';
 import Error404 from '../pages/Error404';
 import ApartmentPage from '../pages/ApartmentPage';
 import Navbar from '../components/Navbar';
-import Footer from '../layout/Footer';
+import Footer from '../components/Footer';
 
 
 function App() {

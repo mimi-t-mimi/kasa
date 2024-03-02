@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import "./Gallery.scss";
 
@@ -41,23 +40,33 @@ export function Gallery(props) {
     return (
         <div className="gallery">
             <div className="image_container">
-                {/* Affichage des images avec la classe CSS appropriée */}
+              
                 {pictures.map((pic, i) => (
-                    <img key={pic} src={pic} alt="" className={getClassName(i)} />
+                    <div key={pic} className="image_wrapper">
+                        <img src={pic} alt="" className={getClassName(i)} />
+                    </div>
                 ))}
             </div>
+
+            {/* Affichage de la numérotation */}
+            {pictures.length > 1 && (
+                <div className="image_counter">
+                    {currentPicture + 1} / {pictures.length}
+                </div>
+            )}
 
             {/* Condition pour afficher les boutons de navigation si plus d'une image est présente */}
             {pictures.length > 1 && (
                 <>
                     <button className="btn btn-next" onClick={moveToNext}>
-                        <i className="fas fa-chevron-left"></i> {/* Icône de navigation gauche */}
+                        <i className="fas fa-chevron-left"></i> 
                     </button>
                     <button className="btn btn-previous" onClick={moveToPrevious}>
-                        <i className="fas fa-chevron-right"></i> {/* Icône de navigation droite */}
+                        <i className="fas fa-chevron-right"></i> 
                     </button>
                 </>
             )}
         </div>
     );
 }
+
