@@ -2,7 +2,7 @@ import React from "react"
 import "./ApartmentHeader.scss";
 
 export function ApartmentHeader(props) {
-const flat= props.flat;
+const flat= props.flat; //je destructure ma prop flat et la stock dans ma cnst flat pour plus de simpliciter dans l'ecriture
 const name =flat.host.name;
 const [firstName,lastName]=name.split( " ");
 
