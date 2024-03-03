@@ -16,7 +16,7 @@ export function DescriptionPanel(props) {
         <span>{props.title}</span>
         <i className="fas fa-chevron-up" onClick={showContent}></i>
       </p>
-      {isContentVisible && <p className="description_content">{props.content}</p>}
+      {isContentVisible && <div className="description_content">{props.content}</div>}
     </div>
   );
 }

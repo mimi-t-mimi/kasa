@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './ApartmentCard.scss';
 
-function ApartementCard(props) {
+function ApartmentCard(props) {
 
   return (  
     <Link to="/flat"
@@ -17,4 +17,4 @@ function ApartementCard(props) {
   );
 }
 
-export default ApartementCard;
+export default ApartmentCard;

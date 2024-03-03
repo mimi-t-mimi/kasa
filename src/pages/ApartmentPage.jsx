@@ -17,7 +17,6 @@ function ApartmentPage() {
           fetch("logements.json")
               .then((res) => res.json())
               .then((flats) => {
-                  // Recherche de l'appartement correspondant à l'ID passé dans l'URL
                   const flat = flats.find((flat) => flat.id === location.state.apartmentId);
                   // Mise à jour de l'état local avec les détails de l'appartement trouvé
                   setFlat(flat);

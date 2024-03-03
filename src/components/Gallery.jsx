@@ -25,9 +25,9 @@ export function Gallery(props) {
         const newCurrentPicture = currentPicture - 1; // Décrémente l'index de l'image actuelle
         if (newCurrentPicture < 0) { // Si l'index devient négatif, revient à la dernière image
             setCurrentPicture(pictures.length - 1);
-            return;
+        } else {
+            setCurrentPicture(newCurrentPicture); // Met à jour l'index de l'image actuelle
         }
-        setCurrentPicture(currentPicture - 1); // Sinon, met à jour l'index de l'image actuelle
     };
 
     // Rendu conditionnel en fonction de la page
@@ -59,11 +59,11 @@ export function Gallery(props) {
                 {/* Affichage des boutons de navigation */}
                 {pictures.length > 1 && (
                     <>
-                        <button className="btn btn-next" onClick={moveToNext}>
-                            <i className="fas fa-chevron-left"></i> 
-                        </button>
                         <button className="btn btn-previous" onClick={moveToPrevious}>
-                            <i className="fas fa-chevron-right"></i> 
+                             <i className="fas fa-chevron-left"></i> 
+                        </button>
+                        <button className="btn btn-next" onClick={moveToNext}>
+                           <i className="fas fa-chevron-right"></i> 
                         </button>
                     </>
                 )}
